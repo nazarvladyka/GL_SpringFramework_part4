@@ -3,7 +3,6 @@ package com.nazarvladyka.service;
 import com.nazarvladyka.domain.Hero;
 import com.nazarvladyka.repository.HeroRepository;
 import org.springframework.stereotype.Service;
-
 import java.util.List;
 
 @Service
@@ -16,6 +15,10 @@ public class HeroService {
 
     public Iterable<Hero> list() {
         return heroRepository.findAll();
+    }
+
+    public Hero save(Hero hero) {
+        return heroRepository.save(hero);
     }
 
     public Iterable<Hero> save(List<Hero> heroes) {
