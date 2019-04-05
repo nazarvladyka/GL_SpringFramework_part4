@@ -20,4 +20,5 @@ public class Hero {
     private String name;
     private String height;
     private String homeworld;
+    private String[] results;
 }
