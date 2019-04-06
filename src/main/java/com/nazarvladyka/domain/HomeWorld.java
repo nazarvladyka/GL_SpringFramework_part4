@@ -3,7 +3,10 @@ package com.nazarvladyka.domain;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.*;
 
-import javax.persistence.*;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 
 @Data
 @AllArgsConstructor
@@ -13,12 +16,10 @@ import javax.persistence.*;
 @ToString
 @JsonIgnoreProperties(ignoreUnknown = true)
 @Entity
-public class Hero {
+public class HomeWorld {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     long id;
     private String name;
-    private String height;
-    private String homeworld;
     private String url;
 }
